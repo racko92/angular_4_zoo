@@ -10,10 +10,10 @@
     <tr *ngFor= "let animal of animals">
         <td>{{ animal.species }}</td>
         <td>{{ animal.name }}</td>
-        <ng-container *ngIf="animal.birthDate">
-            <td>{{ animal.birthDate }}</td>
+        <ng-container *ngIf="animal.dateOfBirth">
+            <td>{{ animal.dateOfBirth }}</td>
         </ng-container>
-        <ng-container *ngIf="!(animal.birthDate)">
+        <ng-container *ngIf="!(animal.dateOfBirth)">
                 <td> Unknown </td>
         </ng-container>
         <td>

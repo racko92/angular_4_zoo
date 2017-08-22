@@ -5,13 +5,22 @@
         <th>Species</th>
         <th>Name</th>
         <th>Date of Birth</th>
+        <th>Delete Animal</th>
     </tr>
     <tr *ngFor= "let animal of animals">
         <td>{{ animal.species }}</td>
         <td>{{ animal.name }}</td>
-        <td>{{ animal.birthDate }}</td>
+        <ng-container *ngIf="animal.birthDate">
+            <td>{{ animal.birthDate }}</td>
+        </ng-container>
+        <ng-container *ngIf="!(animal.birthDate)">
+                <td> Unknown </td>
+        </ng-container>
     </tr>
 </table>
+
+
+
 
 <style>
 

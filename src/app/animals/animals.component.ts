@@ -18,7 +18,7 @@ export class AnimalsComponent{
             {
                 species: 'Cat',
                 name: 'Meow',
-                birthDate: '01.01.2000'
+                birthDate: ''
             },
             {
                 species: 'Hamster',
@@ -33,7 +33,7 @@ export class AnimalsComponent{
             {
                 species: 'Tiger',
                 name: 'Lew',
-                birthDate: '01.01.2000'
+                birthDate: ''
             }
         ]
     }

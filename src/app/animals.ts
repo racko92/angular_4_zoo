@@ -12,6 +12,5 @@ export class Animal{
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.sector = sector;
-
     }
 }

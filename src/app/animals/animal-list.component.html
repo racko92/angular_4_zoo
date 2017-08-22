@@ -24,7 +24,6 @@
         <th>Date of Birth</th>
         <th>Delete Animal</th>
         <th>Move to top</th>
-        <th>Sector</th>
     </tr>
     <tr *ngFor= "let animal of animals">
         <td>{{ animal.species }}</td>
@@ -41,11 +40,19 @@
         <td>
             <button (click)="moveToTop(animal)">Move to top</button>
         </td>
-        <td>{{ animal.sector.name }}</td>
     </tr>
 </table>
-
-
+<br><br>
+<table>
+    <tr>
+        <th>Sector Name</th>
+        <th>Select Sector</th>
+    </tr>
+    <tr *ngFor="let sector of sector">
+        <td>{{ sector.name }}</td>
+        <td><button (click)="alert(sector)">Vidi listu životinja</button></td>
+    </tr>
+</table>
 
 
 <style>

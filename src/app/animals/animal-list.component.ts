@@ -20,12 +20,12 @@ export class AnimalsComponent{
                 new Sector('wather', 'wather')
             ]
             this.animals = [
-                    new Animal('Dog','John','01.01.2000', this.sector[0]),
-                    new Animal('Cat','Meow','', this.sector[1]),
-                    new Animal('Hamster','Mickey','01.01.2000', this.sector[2]),
-                    new Animal('Spider', 'Spidey', '01.01.2000', this.sector[3]),
-                    new Animal('Tiger','Leo', '', this.sector[0])
-                ];
+                new Animal('Dog','John','01.01.2000', this.sector[0]),
+                new Animal('Cat','Meow','', this.sector[1]),
+                new Animal('Hamster','Mickey','01.01.2000', this.sector[2]),
+                new Animal('Spider', 'Spidey', '01.01.2000', this.sector[3]),
+                new Animal('Tiger','Leo', '', this.sector[0])
+            ];
     
         }    
         
@@ -41,5 +41,16 @@ export class AnimalsComponent{
         addAnimal(animal){
             this.animals.push(animal);
             this.newAnimal = new Animal('','','');
+        }
+        alert(sector){
+
+            let list = [];
+            
+            this.animals.forEach(function(animal){
+                if(animal.sector && animal.sector.name == sector.name){
+                    list.push(animal.name);
+                }
+            });
+            alert(list.toString());
         }
     }

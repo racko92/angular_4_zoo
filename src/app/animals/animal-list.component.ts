@@ -7,7 +7,8 @@ import { Animal } from '../animals.component';
 })
 export class AnimalsComponent{
     
-        private animals: any[];
+        animals: any[];
+        newAnimal: Animal = new Animal('','','');
     
         constructor(){
             this.animals = [
@@ -28,5 +29,9 @@ export class AnimalsComponent{
             const index = this.animals.indexOf(animal);
             this.animals.splice(index, 1);
             this.animals.unshift(animal); 
+        }
+        addAnimal(animal){
+            this.animals.push(animal);
+            this.newAnimal = new Animal('','','');
         }
     }

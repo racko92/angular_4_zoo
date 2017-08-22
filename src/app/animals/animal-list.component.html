@@ -1,5 +1,22 @@
 <h1>Animals</h1>
 
+<label for="species">Species</label>
+<br>
+<input type="text" size="50" [(ngModel)]="newAnimal.species" name="species">
+<br>
+<label for="name">Name</label>
+<br>
+<input type="text" size="50" [(ngModel)]="newAnimal.name" name="name">
+<br>
+<label for="dateOfBirth">Date of birth</label>
+<br>
+<input type="text" size="50" [(ngModel)]="newAnimal.dateOfBirth" name="dateOfBirth">
+<br>
+<button id="add" (click)="addAnimal(newAnimal)">Add Animal</button>
+<br>
+
+
+
 <table>
     <tr>
         <th>Species</th>
@@ -30,7 +47,6 @@
 
 
 <style>
-
     table{
         width:100%; 
         border: 1px solid black; 
@@ -41,5 +57,12 @@
     td, th{
         border: 1px solid black;
     }
-
+    input{
+        height: 30px;
+    }
+    #add{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 30px;
+    }
 </style>

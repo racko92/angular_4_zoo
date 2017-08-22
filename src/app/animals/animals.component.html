@@ -16,6 +16,9 @@
         <ng-container *ngIf="!(animal.birthDate)">
                 <td> Unknown </td>
         </ng-container>
+        <td>
+            <button (click)="remove(animal)">X</button>
+        </td>
     </tr>
 </table>
 
